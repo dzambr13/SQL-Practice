@@ -15,11 +15,14 @@ CREATE TABLE bond(
     box_office DECIMAL(5,1)
 );
 
-//primary keys, cannot contain null or empty values, can only be 1 primary key in every table
+//primary keys, cannot contain NULL or empty values, can only be 1 primary key in every table
+//unique keys, can have as many as you want, can have NULL
+//not null, does not allow NULL (empty) values
+//these constraints help keep data clean
 CREATE TABLE bond(
     id INT PRIMARY KEY,
     title VARCHAR(50),
-    released INT,
+    released INT NOT NULL,
     actor VARCHAR(30),
     director VARCHAR(30),
     box_office DECIMAL(5,1)
