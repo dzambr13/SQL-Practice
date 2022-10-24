@@ -193,6 +193,8 @@ count(a.overall_rating) as pickrate
 FROM
 player_attributes a 
 INNER JOIN player b ON a.player_api_id=b.player_api_id, 
+GROUP BY a.player_api_id,
+b.player_name
 ORDER BY rating DESC 
 
 //having clause 
