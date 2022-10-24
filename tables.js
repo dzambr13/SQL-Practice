@@ -1,13 +1,12 @@
 //data types:
 //int
-//decimal (s,d) (decimal ex: 6,2)
+//decimal (s,d) (decimal ex: 6,2 can coontain a max number like this 1234.56 cause the decimal has 6 characters with 2 decimal places)
 //varchar(30) can contain letter, numbers, and special character, or all 3, the number in the parenthesis indicates the max amount of characters that the VARCHAR can have
 //date --formatted as YYYY-MM-DD
 //timestamp --formatted as YYYY-MM-DD HH:MM:SS
 
 //creating a table
 CREATE TABLE bond(
-
     id INT,
     title VARCHAR(50),
     released INT,
