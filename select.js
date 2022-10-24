@@ -62,4 +62,10 @@ select * from player order by weight desc
 //joining data from other tables 
 //this command joins the player name and the player id
 //pushing
-select player_attributes.player_api_id,player_attributes.date,player_attributes.overall_rating from player_attributes inner join player on player_attributes.player_api_id=player.player_api_id
+select player_attributes.player_api_id,player_attributes.player_name,player_attributes.date,player_attributes.overall_rating from player_attributes inner join player on player_attributes.player_api_id=player.player_api_id
+
+//^^ clean up on the top
+select a.player_api_id,b.player_api_id,a.date,a.overall_rating from player_attributes a inner join player b on a.player_api_id=b.player_api_id
+
+//grouping by id, player name, and their ratings
+select a.player_api_id, b.player_name, sum(a.overall_rating) as rating from player_attributes a inner join player b on a.player_api_id=b.player_api_id group by a.player_api_id, b.player.name 
