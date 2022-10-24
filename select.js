@@ -55,6 +55,9 @@ select * from match where player_1 is not null
 
 //sort results 
 //default sorting in ascending order
-//use "des" for descending order
+//use "desc" for descending order
 select * from player order by weight 
-select * from player order by weight des
+select * from player order by weight desc
+
+//joining data from other tables 
+select * from player_attributes
