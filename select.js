@@ -42,17 +42,17 @@ WHERE weight>=190
 //"and" and "or" statements
 //"and" where both conditions have to be met
 //"or" where only one of the conditions have to be met
-select 
+SELECT 
 * 
-from 
+FROM
 player 
-where weight>190 AND height>190
+WHERE weight>190 AND height>190
 
-select 
+SELECT 
 * 
-from 
+FROM
 player 
-where weight>190 AND height>190
+WHERE weight>190 AND height>190
 
 //select for non integers 
 //must follow up with and equals and SINGLE QUOTES ex: ='Dave Zambrano'
