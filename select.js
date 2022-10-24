@@ -57,8 +57,17 @@ WHERE weight>190 AND height>190
 //select for non integers 
 //must follow up with and equals and SINGLE QUOTES ex: ='Dave Zambrano'
 //"=" and "like" are p much the same 
-select * from player where player_name='Dave Zambrano'
-select * from player where player_name like 'Dave Zambrano'
+SELECT
+* 
+FROM
+player 
+WHERE player_name='Dave Zambrano'
+
+SELECT 
+* 
+FROM
+player 
+WHERE player_name LIKE 'Dave Zambrano'
 
 //return everyone who has the name Dave 
 //just add the % after the name in the string to return the first name Dave
