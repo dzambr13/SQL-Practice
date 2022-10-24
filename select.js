@@ -41,3 +41,6 @@ select * from player where player_name like 'D%e'
 //starts with T, has a character between T and m, then has anything else that follows
 select * from player where player_name like 'T_m%' //returns names like: Tim, Tamas, Tamir
 
+//"in" conditions 
+//only used for EXACT matches 
+select * from player where player_name in ('Cristiano Ronaldo', 'Lionel Messi')
