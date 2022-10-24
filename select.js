@@ -25,3 +25,14 @@ select * from player where weight>190 or height>190
 //"=" and "like" are p much the same 
 select * from player where player_name='Dave Zambrano'
 select * from player where player_name like 'Dave Zambrano'
+
+//return everyone who has the name Dave 
+//just add the % after the name in the string to return the first name Dave
+//just add the % before the name in the string to return the first name Dave
+//just add the % before and after the name in the string to return any name that has Dave in it whether Dave would be their first or last part of their name
+select * from player where player_name like 'Dave%' //first name Dave
+select * from player where player_name like '%Dave' //last name Dave 
+select * from player where player_name like '%Dave%' //returns any player name that contains Dave
+
+//return a player_name that starts with "D" and ends with e
+select * from player where player_name like 'D%e'
