@@ -138,8 +138,17 @@ WHERE player_1 IS NOT NULL
 //sort results 
 //default sorting in ascending order
 //use "desc" for descending order
-select * from player order by weight 
-select * from player order by weight desc
+SELECT
+* 
+FROM
+player 
+ORDER BY weight 
+
+SELECT 
+* 
+FROM
+player 
+ORDER BY weight DESC
 
 //joining data from other tables 
 //this command joins the player name and the player id
