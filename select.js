@@ -21,5 +21,7 @@ select * from player where weight>190 and height>190
 select * from player where weight>190 or height>190
 
 //select for non integers 
-//must followup with and equals and SINGLE QUOTES ex: ='Dave Zambrano'
+//must follow up with and equals and SINGLE QUOTES ex: ='Dave Zambrano'
+//"=" and "like" are p much the same 
 select * from player where player_name='Dave Zambrano'
+select * from player where player_name like 'Dave Zambrano'
