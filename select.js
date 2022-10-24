@@ -68,4 +68,8 @@ select player_attributes.player_api_id,player_attributes.player_name,player_attr
 select a.player_api_id,b.player_api_id,a.date,a.overall_rating from player_attributes a inner join player b on a.player_api_id=b.player_api_id
 
 //grouping by id, player name, and their ratings
-select a.player_api_id, b.player_name, sum(a.overall_rating) as rating from player_attributes a inner join player b on a.player_api_id=b.player_api_id group by a.player_api_id, b.player.name 
+//sorted descending order
+select a.player_api_id, b.player_name, sum(a.overall_rating) as rating from player_attributes a inner join player b on a.player_api_id=b.player_api_id group by a.player_api_id, b.player.name order by rating desc 
+
+//sorting by avg and pick rate 
+select a.player_api_id, b.player_name, avg(a.overall_rating) as rating, count(a.overall_rating) as pickrate from player_attributes a inner join player b on a.player_api_id=b.player_player_api_id, b.player_name order by rating desc 
