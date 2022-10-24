@@ -1,5 +1,8 @@
 //returns ALL data from a table 
-select * from player 
+select 
+* 
+from 
+player 
 
 //if you only want to select specific fields
 //with this commend, you return the the players names and their respective birthdays
