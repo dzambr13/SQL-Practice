@@ -107,7 +107,7 @@ player
 WHERE player_name LIKE 'T_m%' //returns names like: Tim, Tamas, Tamir
 
 //"in" conditions 
-//only used for EXACT matches 
+//only used for EXACT matches so you can't use % or _ 
 SELECT 
 * 
 FROM
@@ -116,11 +116,24 @@ WHERE player_name in ('Cristiano Ronaldo', 'Lionel Messi')
 
 //between operator
 //this returns every player between the weight of 190 and 200
-select * from player where weight between 190 and 200
+SELECT
+* 
+FROM
+player 
+WHERE weight BETWEEN 190 AND 200
 
 //returning null values
-select * from match where player_1 is null 
-select * from match where player_1 is not null 
+SELECT
+* 
+FROM
+match 
+WHERE player_1 IS NULL
+
+SELECT 
+* 
+FROM
+match 
+WHERE player_1 IS NOT NULL 
 
 //sort results 
 //default sorting in ascending order
