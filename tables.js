@@ -14,3 +14,23 @@ CREATE TABLE bond(
     director VARCHAR(30),
     box_office DECIMAL(5,1)
 );
+
+//primary keys, cannot contain null or empty values, can only be 1 primary key in every table
+CREATE TABLE bond(
+    id INT PRIMARY KEY,
+    title VARCHAR(50),
+    released INT,
+    actor VARCHAR(30),
+    director VARCHAR(30),
+    box_office DECIMAL(5,1)
+);
+
+
+
+
+
+
+
+
+//deleting a table
+DROP TABLE bond 
