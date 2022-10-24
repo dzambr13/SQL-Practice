@@ -197,7 +197,7 @@ GROUP BY a.player_api_id,
 b.player_name
 ORDER BY rating DESC 
 
-//having clause 
+//having clause
 SELECT
 a.player_api_id, 
 b.player_name, 
