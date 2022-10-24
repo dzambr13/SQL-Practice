@@ -36,3 +36,8 @@ select * from player where player_name like '%Dave%' //returns any player name t
 
 //return a player_name that starts with "D" and ends with e
 select * from player where player_name like 'D%e'
+
+//use an underscore _ to represent single characters
+//starts with T, has a character between T and m, then has anything else that follows
+select * from player where player_name like 'T_m%' //returns names like: Tim, Tamas, Tamir
+
