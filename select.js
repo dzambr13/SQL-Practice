@@ -52,3 +52,9 @@ select * from player where weight between 190 and 200
 //returning null values
 select * from match where player_1 is null 
 select * from match where player_1 is not null 
+
+//sort results 
+//default sorting in ascending order
+//use "des" for descending order
+select * from player order by weight 
+select * from player order by weight des
