@@ -44,3 +44,11 @@ select * from player where player_name like 'T_m%' //returns names like: Tim, Ta
 //"in" conditions 
 //only used for EXACT matches 
 select * from player where player_name in ('Cristiano Ronaldo', 'Lionel Messi')
+
+//between operator
+//this returns every player between the weight of 190 and 200
+select * from player where weight between 190 and 200
+
+//returning null values
+select * from match where player_1 is null 
+select * from match where player_1 is not null 
