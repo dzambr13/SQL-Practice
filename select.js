@@ -73,16 +73,38 @@ WHERE player_name LIKE 'Dave Zambrano'
 //just add the % after the name in the string to return the first name Dave
 //just add the % before the name in the string to return the first name Dave
 //just add the % before and after the name in the string to return any name that has Dave in it whether Dave would be their first or last part of their name
-select * from player where player_name like 'Dave%' //first name Dave
-select * from player where player_name like '%Dave' //last name Dave 
-select * from player where player_name like '%Dave%' //returns any player name that contains Dave
+SELECT
+* 
+FROM
+player 
+WHERE player_name LIKE 'Dave%' //first name Dave
+
+SELECT
+* 
+FROM
+player 
+WHERE player_name LIKE '%Dave' //last name Dave 
+
+SELECT
+* 
+FROM
+player 
+WHERE player_name LIKE '%Dave%' //returns any player name that contains Dave
 
 //return a player_name that starts with "D" and ends with e
-select * from player where player_name like 'D%e'
+SELECT 
+* 
+FROM
+player 
+WHERE player_name LIKE 'D%e'
 
 //use an underscore _ to represent single characters
 //starts with T, has a character between T and m, then has anything else that follows
-select * from player where player_name like 'T_m%' //returns names like: Tim, Tamas, Tamir
+SELECT 
+* 
+FROM
+player 
+WHERE player_name LIKE 'T_m%' //returns names like: Tim, Tamas, Tamir
 
 //"in" conditions 
 //only used for EXACT matches 
