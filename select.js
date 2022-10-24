@@ -198,15 +198,15 @@ b.player_name
 ORDER BY rating DESC 
 
 //having clause 
-select 
+SELECT
 a.player_api_id, 
 b.player_name, 
 avg(a.overall_rating) as rating, 
 count(a.overall_rating) as pickrate 
-from 
+FROM
 player_attributes a 
-inner join player b on a.player_api_id=b.player_player_api_id, 
-group by a.player_api_id,
+INNER JOIN player b ON a.player_api_id=b.player_player_api_id, 
+GROUP BY a.player_api_id,
 b.player_name
-having rating>85
-order by rating desc 
+HAVING rating>85
+ORDER BY rating DESC 
