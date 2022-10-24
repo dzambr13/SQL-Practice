@@ -60,4 +60,5 @@ select * from player order by weight
 select * from player order by weight desc
 
 //joining data from other tables 
-select * from player_attributes
+//this command joins the player name and the player id
+select player_attributes.player_api_id,player_attributes.date,player_attributes.overall_rating from player_attributes inner join player on player_attributes.player_api_id=player.player_api_id
