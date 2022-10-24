@@ -165,7 +165,8 @@ INNER JOIN player ON player_attributes.player_api_id=player.player_api_id
 SELECT
 a.player_api_id,
 b.player_api_id,
-a.date,a.overall_rating 
+a.date,
+a.overall_rating 
 FROM
 player_attributes a 
 INNER JOIN player b ON a.player_api_id=b.player_api_id
@@ -184,7 +185,15 @@ b.player.name
 ORDER BY rating DESC 
 
 //sorting by avg and pick rate 
-select a.player_api_id, b.player_name, avg(a.overall_rating) as rating, count(a.overall_rating) as pickrate from player_attributes a inner join player b on a.player_api_id=b.player_api_id, order by rating desc 
+SELECT
+a.player_api_id, 
+b.player_name, 
+avg(a.overall_rating) as rating, 
+count(a.overall_rating) as pickrate 
+FROM
+player_attributes a 
+INNER JOIN player b ON a.player_api_id=b.player_api_id, 
+ORDER BY rating DESC 
 
 //having clause 
 select 
