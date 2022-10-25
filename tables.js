@@ -15,9 +15,11 @@ CREATE TABLE bond(
     box_office DECIMAL(5,1)
 );
 
+//constraints:
 //primary keys, cannot contain NULL or empty values, can only be 1 primary key in every table
 //unique keys, can have as many as you want, can have NULL
 //not null, does not allow NULL (empty) values
+//default, replaces null values with specific defaults
 //these constraints help keep data clean
 CREATE TABLE bond(
     id INT PRIMARY KEY,
@@ -25,8 +27,22 @@ CREATE TABLE bond(
     released INT NOT NULL,
     actor VARCHAR(30),
     director VARCHAR(30),
-    box_office DECIMAL(5,1)
+    box_office DECIMAL(5,1) DEFAULT '0.0'
 );
+
+//if the table is created and you wanna put more data in, use INSERT INTO 
+INSERT INTO bond VALUES(1, 'DR.NO', 1962, 'SEAN CONNERY','Terence Young', 59.5)
+
+//querying data
+SELECT 
+*
+FROM 
+bond
+
+//if we want to insert data but don't have everything from the table, you can specify what you want to insert 
+//when you do this, the values that weren't put in are NULL except default, which can't be NULL so it's 0.0 as we specified 
+INSERT INTO bond(id, title, released) VALUES
+    (2, 'FROM RUSSIA WITH LOVE', 1963);
 
 
 
