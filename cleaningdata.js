@@ -25,3 +25,10 @@ orders
 GROUP BY 
 segtrim,
 order_cat
+
+//LPAD and RPAD
+SELECT 
+zip_code, 
+LPAD( zip_code, 5, '0')
+FROM 
+orders
