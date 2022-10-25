@@ -49,6 +49,11 @@ ALTER TABLE bond ADD studio VARCHAR(30)
 //if adding studio was a mistake, we can delete using this:
 ALTER TABLE bond DROP studio
 
+//updating the table
+UPDATE bond 
+SET actor='Connery' //what you want it to be
+WHERE actor='SHAWN CONNERY' //what it currently is
+
 
 //if you wanna see the values of the table
 DESCRIBE bond
