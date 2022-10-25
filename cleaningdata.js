@@ -42,8 +42,17 @@ orders
 
 //LENGTH 
 //will show how long (in characters) something is
+//can also use LENGTH with WHERE 
 SELECT 
 customer_name,
 LENGTH(customer_name)
 FROM
 orders
+
+SELECT 
+customer_name,
+LENGTH(customer_name)
+FROM
+orders
+WHERE 
+length(customer_name)>20
