@@ -27,8 +27,15 @@ segtrim,
 order_cat
 
 //LPAD and RPAD
+//these add 0's on the LEFT side
 SELECT 
 zip_code, 
 LPAD( zip_code, 5, '0')
 FROM 
 orders
+
+//SUBSTRING, returns a specigic number of characters from a particular position of a string ex: if i have US-1998-0313, i can use substring to just get the 1998 part 
+SELECT 
+SUBSTRING(order, 4,4) AS order_num //4 starting position, then 4 length
+FROM 
+orders 
