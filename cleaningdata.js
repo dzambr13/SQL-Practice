@@ -82,5 +82,9 @@ orders
 //UPPER and LOWER functions
 SELECT 
 CONCAT(UPPER(LEFT(first_name,1)),LOWER(substring(first_name,2,length(frist_name)))) AS new_first
+FROM
+(SELECT substr(customer_name,1,locate('',customer_name)-1) AS first_name,
+substr(customer_name,locate('',customer_name)+1, LENGTH(customer_name)) AS last_name
 FROM 
 orders
+)AS names
