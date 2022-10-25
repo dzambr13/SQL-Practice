@@ -54,6 +54,9 @@ UPDATE bond
 SET actor='Connery' //what you want it to be
 WHERE actor='SHAWN CONNERY' //what it currently is
 
+//delete a row
+DELETE FROM bond WHERE title = 'NEVER SAY NEVER AGAIN'
+
 
 //if you wanna see the values of the table
 DESCRIBE bond
