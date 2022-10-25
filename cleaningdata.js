@@ -55,4 +55,19 @@ LENGTH(customer_name)
 FROM
 orders
 WHERE 
-length(customer_name)>20
+length(customer_name)>20 //will return ppls names whose characters are >20
+
+//LOCATION and POSITION
+//LOCATION 
+SELECT 
+customer_name,
+locate('', customer_name)
+FROM
+orders
+
+//This will return the customers first name
+//The -1 is there cause there is an extra space after the name is printed, the -1 removes the space
+SELECT
+substr(customer_name, 1, locate('',customer_name)-1)
+FROM
+orders
