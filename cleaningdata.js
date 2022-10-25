@@ -88,3 +88,6 @@ substr(customer_name,locate('',customer_name)+1, LENGTH(customer_name)) AS last_
 FROM 
 orders
 )AS names
+
+//CONDITIONAL EXPRESSION, used to group column values and fix errors like misspellings
+//basically if-then-else algorithmic expressions
