@@ -39,3 +39,11 @@ SELECT
 SUBSTRING(order, 4,4) AS order_num //4 starting position, then 4 length
 FROM 
 orders 
+
+//LENGTH 
+//will show how long (in characters) something is
+SELECT 
+customer_name,
+LENGTH(customer_name)
+FROM
+orders
