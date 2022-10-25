@@ -68,6 +68,12 @@ orders
 //This will return the customers first name
 //The -1 is there cause there is an extra space after the name is printed, the -1 removes the space
 SELECT
-substr(customer_name, 1, locate('',customer_name)-1)
+substr(customer_name, 1, locate('',customer_name)-1) AS first_name
+FROM
+orders
+
+SELECT 
+substr(customer_name,1,locate('',customer_name)-1) as first_name,
+substr(customer_name,locate('',customer_name)+1,length(customer_name)) AS last_name
 FROM
 orders
