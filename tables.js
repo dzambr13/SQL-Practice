@@ -46,8 +46,8 @@ INSERT INTO bond(id, title, released) VALUES
 
 //modifying a table so that you can: add column, delete column, or change column
 ALTER TABLE bond ADD studio VARCHAR(30)
-
-
+//if adding studio was a mistake, we can delete using this:
+ALTER TABLE bond DROP studio
 
 
 //if you wanna see the values of the table
