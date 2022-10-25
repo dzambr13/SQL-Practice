@@ -44,12 +44,14 @@ bond
 INSERT INTO bond(id, title, released) VALUES
     (2, 'FROM RUSSIA WITH LOVE', 1963);
 
+//modifying a table so that you can: add column, delete column, or change column
+ALTER TABLE bond ADD studio VARCHAR(30)
 
 
 
 
-
-
+//if you wanna see the values of the table
+DESCRIBE bond
 
 //deleting a table
 DROP TABLE bond 
