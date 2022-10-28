@@ -5,3 +5,7 @@ print(price > 10 and price < 30)
 
 price = 5
 print(not price > 10)
+
+# and (both)
+# or (at least one)
+# not inverses values
