@@ -91,3 +91,9 @@ orders
 
 //CONDITIONAL EXPRESSION, used to group column values and fix errors like misspellings
 //basically if-then-else algorithmic expressions
+//correcting the misspelling of ohio, its ohios rn
+SELECT 
+state, 
+CASE WHEN state LIKE 'Ohios' THEN 'Ohio' ELSE state END
+FROM 
+orders
